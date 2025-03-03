@@ -85,7 +85,7 @@ export default function Page() {
         />
 
         {/* Display Uploaded Image Preview */}
-        {uploadedImage && (
+        {/* {uploadedImage && (
           <div className="mt-4">
             <p className="text-gray-700 dark:text-gray-300">Uploaded Image:</p>
             <img
@@ -94,7 +94,7 @@ export default function Page() {
               className="mt-2 rounded-lg shadow-lg max-w-xs"
             />
           </div>
-        )}
+        )} */}
 
         {/* Display Uploaded QR Code Result */}
         {uploadedQRData && (
