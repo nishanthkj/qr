@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import users from "@/data/user";
+import quizQuestions from "@/data/quiz";
 
 export default function UserPage() {
   const router = useRouter();
@@ -23,12 +24,6 @@ export default function UserPage() {
     
     fetchParams();
   }, [params]);
-
-  const quizQuestions = [
-    { id: 1, question: "What is the capital of France?", options: ["Berlin", "Madrid", "Paris", "Rome"], answer: "Paris" },
-    { id: 2, question: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" },
-    { id: 3, question: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Jupiter", "Venus"], answer: "Mars" }
-  ];
 
   const handleOptionChange = (questionId, selectedOption) => {
     setQuizAnswers((prev) => ({ ...prev, [questionId]: selectedOption }));
